@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .Calc{
+            border: 2px solid black;
+            width: 500px;
+        }
+        .plus{
+            display: inline-block;
+            border: 2px solid black;
+            padding:10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .minus{
+            display: inline-block;
+            border: 2px solid black;
+            padding:10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .del{
+            display: inline-block;
+            border: 2px solid black;
+            padding:10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .umn{
+            display: inline-block;
+            border: 2px solid black;
+            padding:10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Calc">
+        <center>
+            <h1>
+                Калькулятор
+            </h1>
+        </center>
+        <hr>
+        <center>
+            <input type="text" id="num1" placeholder="Введите сюда первое число"><br><br>
+            <input type="text" id="num2" placeholder="Введите сюда второе число">
+            <h3>Выберите Операцию:</h3>
+        </center>
+        <div class="plus" id="plus">
+            <strong>+</strong>
+        </div>
+        <div class="minus" id="subtract">
+            <strong>-</strong>
+        </div>
+        <div class="del" id="divide">
+            <strong>/</strong>
+        </div>
+        <div class="umn" id="multiply">
+            <strong>*</strong>
+        </div>
+        <center>
+            <h2>Результат: <span id="result"></span></h2>
+        </center>
+    </div>
+    
+    <script>
+        document.getElementById("plus").addEventListener("click", function () {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 + num2;
+            document.getElementById("result").textContent = result;
+        });
+    
+        document.getElementById("subtract").addEventListener("click", function () {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 - num2;
+            document.getElementById("result").textContent = result;
+        });
+    
+        document.getElementById("divide").addEventListener("click", function () {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 / num2;
+            document.getElementById("result").textContent = result;
+        });
+    
+        document.getElementById("multiply").addEventListener("click", function () {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 * num2;
+            document.getElementById("result").textContent = result;
+        });
+    </script>
+    
+    
+</body>
+</html>
